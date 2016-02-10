@@ -72,7 +72,7 @@ if (answer1 === "1" || answer1 === "Go to the bike store"){
 
 } else if (answer1 === "2" || answer1 === "Go to the Grammys") {
     score += 1;
-    var answer1_2 = prompt("'My greatest pain in life is that I will never be able to see myself perform live. But everyone else will. Let's bounce,' says Kanye. You take Kanye's chopper to the Grammys and land on the red carpet. As you make your way to your seats, Kane sees that Drake has taken his seat. 'I'm about to throw some kazoo on this bitch! You got my back?' Do you 1. Have his back 2. Turn traitor and support Drake 3. Find T-Swift and see if she's dating anyone right now");
+    var answer1_2 = prompt("'My greatest pain in life is that I will never be able to see myself perform live. But everyone else will. Let's bounce,' says Kanye. You take Kanye's chopper to the Grammys and land on the red carpet. As you make your way to your seats, Kanye sees that Drake has taken his seat. 'I'm about to throw some kazoo on this bitch! You got my back?' Do you 1. Have his back 2. Turn traitor and support Drake 3. Find T-Swift and see if she's dating anyone right now");
 
     if (answer1_2 === "1" || answer1_2 === "Have his back") {
       score += 1;
