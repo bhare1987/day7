@@ -5,26 +5,50 @@ if (answer1 === "1" || answer1 === "Go to the bike store"){
   var answer1_1 = prompt("'I make awesome decisions in bike stores!' exclaims Kanye. You jump in his ride and cruise down to the bike store. Racks of bikes of all different shapes, colors, and sizes are yours for the taking. Kanye snaps his fingers to get you back on task. 'You are going to help me find the perfect bike for Kim.' Do you choose 1. The stylish road bike 2. The practical beach cruiser 3. The Big Wheel Tricycle");
 
   if (answer1_1 === "1" || answer1_1 === "The stylish road bike") {
-    var answer1_1_1 = prompt("'Nah, I like the other one better,' says Kanye, 'and I know style. I been fly so long I feel asleep on the plane!' He begins to bike around the store. What do you do? 1. Agree with Kanye 2. Stick a bicycle pump in the spokes ");
+    var answer1_1_1 = prompt("'Nah, I like the other one better,' says Kanye, 'and I know style. I been fly so long I feel asleep on the plane!' He begins to bike around the store. What do you do? 1. Agree with Kanye 2. Stick a bicycle pump in the spokes 3. Ride around with him");
 
     if (answer1_1_1 === "1" || answer1_1_1 === "Agree with Kanye") {
       kanyeKim();
       kanyeWin();
-    } else {
+    } else if (answer1_1_1 === "2"  || answer1_1_1 === "Stick a bicycle pump in the spokes") {
       kanyeGuard();
+    } else if (answer1_1_1 === "3"  || answer1_1_1 === "Ride around with him") {
+      console.log("You ride around the store with Kanye and start an impromptu bike race. You let Kanye win. 'See, I told you I make awesome decisions in bike stores!' he says");
+      kanyeWin();
+    } else {
+      kanyePout();
     };
   } else if (answer1_1 === "2" || answer1_1 === "The practical beach cruiser") {
-    var answer1_1_2 = prompt("'Nah, I like the other one better,' says Kanye, 'and I know style. I been fly so long I feel asleep on the plane!' He begins to bike around the store. What do you do? 1. Agree with Kanye 2. Stick a bicycle pump in the spokes");
+    var answer1_1_2 = prompt("'Nah, I like the other one better,' says Kanye, 'and I know style. I been fly so long I feel asleep on the plane!' He begins to bike around the store. What do you do? 1. Agree with Kanye 2. Stick a bicycle pump in the spokes 3. Ride around with him");
 
     if (answer1_1_2 === "1" || answer1_1_2 === "Agree with Kanye") {
       kanyeKim();
       kanyeWin();
-    } else {
+    } else if (answer1_1_2 === "2"  || answer1_1_2 === "Stick a bicycle pump in the spokes") {
       kanyeGuard();
+    } else if (answer1_1_2 === "3"  || answer1_1_2 === "Ride around with him") {
+      console.log("You ride around the store with Kanye and start an impromptu bike race. You let Kanye win. 'See, I told you I make awesome decisions in bike stores!' he says");
+      kanyeWin();
+    } else {
+      kanyePout();
     };
   } else if (answer1_1 === "3" || answer1_1 === "The Big Wheel Tricycle") {
-      kanyeThreat();
-      kanyeGuard();
+      avar answer1_1_3 = prompt("'You think this is a joke son?!' Kanye demands. How do you respond? 1. Yes, just like your career 2. No way, big wheels are awesome 3. Run away") {
+
+      if (answer1_1_3 === "1" || answer1_1_3 === "Yes, just like your career") {
+        kanyeThreat();
+        kanyeGuard();
+      } else if (answer1_1_3 === "2" || answer1_1_3 === "No way, big wheels are awesome") {
+        console.log("'Big wheels ARE awesome. I am glad I thought of it.' says Kanye.");
+        kanyeKim();
+        kanyeWin();
+      } else if (answer1_1_3 === "3" || answer1_1_3 === "Run away") {
+         kanyeDiss();
+      } else {
+        kanyePout();
+      }
+
+      }
   } else {
     kanyePout();
   };
