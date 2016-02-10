@@ -5,7 +5,7 @@ if (answer1 === "1" || answer1 === "Go to the bike store"){
   var answer1_1 = prompt("'I make awesome decisions in bike stores!' exclaims Kanye. You jump in his ride and cruise down to the bike store. Racks of bikes of all different shapes, colors, and sizes are yours for the taking. Kanye snaps his fingers to get you back on task. 'You are going to help me find the perfect bike for Kim.' Do you choose 1. The stylish road bike 2. The practical beach cruiser 3. The Big Wheel Tricycle");
 
   if (answer1_1 === "1" || answer1_1 === "The stylish road bike") {
-    var answer1_1_1 = prompt("'Nah, I like the other one better,' says Kanye, 'and I know style. I been fly so long I feel asleep on the plane!' He begins to bike around the store. What do you do? 1. Agree with Kanye 2. Stick a bicycle pump in the spokes");
+    var answer1_1_1 = prompt("'Nah, I like the other one better,' says Kanye, 'and I know style. I been fly so long I feel asleep on the plane!' He begins to bike around the store. What do you do? 1. Agree with Kanye 2. Stick a bicycle pump in the spokes ");
 
     if (answer1_1_1 === "1" || answer1_1_1 === "Agree with Kanye") {
       kanyeKim();
@@ -80,13 +80,52 @@ if (answer1 === "1" || answer1 === "Go to the bike store"){
   var answer1_3 = prompt("'I am going to order the salmon medium instead of medium well. I don't want to ruin the magic,' says Kanye. You jump on the back of his crotch rocket and ride down to Fish and Shizz. You are seated in the VIP section and given a menu. What do you order? 1. The salmon 2. The filet mignon 3. Doritos and dom perignon");
 
   if (answer1_3 === "1" || "The salmon") {
-    var answer1_3_1 = prompt("");
+    var answer1_3_1 = prompt("'You can't copy Kanye!' says Kanye, and throws his drink in your face. 'You may be talented, but you're not Kanye West!' Do you 1. Get up and walk out 2. Dry your face and apologize 3. Flip the table");
+
+    if (answer1_3_1 === "1" || answer1_3_1 === "Get up and walk out") {
+      kanyeDiss();
+    } else if (answer1_3_1 === "2" || answer1_3_1 === "Dry your face and apologize") {
+      console.log("'That's ok son. It's not easy being me. Order something else and let's eat!'");
+      kanyeWin();
+    } else if (answer1_3_1 === "3" || answer1_3_1 === "Flip the table") {
+      kanyeThreat();
+      kanyeGuard();
+    } else {
+      kanyePout();
+    }
 
   } else if (answer1_3 === "2" || "The filet mignon") {
-    var answer1_3_2 = prompt("");
+    var answer1_3_2 = prompt("'You got beef with Kanye?' he asks. 'You wanna be startin' something with your food choice son?' Do you 1. Apologize. You don't want beef with Kanye 2. Say you just wanted some steak 3. Flip the table");
+
+    if (answer1_3_2 === "1" || "Apologize. You don't want beef with Kanye") {
+      console.log("'Smart choice son. You didn't want to beef with me. Ask Taylor'");
+      kanyeWin();
+    } else if (answer1_3_2 === "2" || "Say you just wanted some steak") {
+      console.log("Kanye's a vegetarian. You have offended him.");
+      kanyePout();
+    } else if (answer1_3_2 === "3" || "Flip the table") {
+      kanyeThreat();
+      kanyeGuard();
+    } else {
+      kanyePout();
+    };
 
   } else if (answer1_3 === "3" || "Doritos and dom perignon") {
-    var answer1_3_3 = prompt("");
+    var answer1_3_3 = prompt("'You gonna order the Kanye in Kanye's favorite restaurant? That's bold son. I like you. You may ask me one question.' Do you ask 1. What he thinks of planes 2. What he thinks of fur pillows 3. What he thinks of apples");
+
+    if (answer1_3_3 === "1" || answer1_3_3 === "What he thinks of planes") {
+      console.log("Kanye says, 'I hate when I'm on a flight and I wake up with a water bottle next to me like oh great now I gotta be responsible for this water bottle.'");
+      kanyeWin();
+    } else if (answer1_3_3 === "2" || answer1_3_3 === "What he thinks of fur pillows") {
+      console.log("Fur pillows are actually hard to sleep on");
+      kanyeWin();
+    } else if (answer1_3_3 === "3" || answer1_3_3 === "What he thinks of apples") {
+      console.log("If you have an apple and I have an apple and we exchange these apples then you and I will still each have one apple");
+      kanyeWin();
+    } else {
+      kanyePout();
+    }
+
   } else {
     kanyePout();
   };
