@@ -48,7 +48,6 @@ if (answer1 === "1" || answer1 === "Go to the bike store"){
         kanyePout();
       }
 
-      }
   } else {
     kanyePout();
   };
