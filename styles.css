@@ -12,3 +12,9 @@
   margin: 0 auto;
   margin-top: 10px;
 }
+
+#button {
+  display: block;
+  margin-left: 69%;
+  margin-top: 5px;
+}
