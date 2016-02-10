@@ -33,7 +33,7 @@ if (answer1 === "1" || answer1 === "Go to the bike store"){
       kanyePout();
     };
   } else if (answer1_1 === "3" || answer1_1 === "The Big Wheel Tricycle") {
-      avar answer1_1_3 = prompt("'You think this is a joke son?!' Kanye demands. How do you respond? 1. Yes, just like your career 2. No way, big wheels are awesome 3. Run away") {
+      var answer1_1_3 = prompt("'You think this is a joke son?!' Kanye demands. How do you respond? 1. Yes, just like your career 2. No way, big wheels are awesome 3. Run away") {
 
       if (answer1_1_3 === "1" || answer1_1_3 === "Yes, just like your career") {
         kanyeThreat();
