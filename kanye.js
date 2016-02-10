@@ -213,7 +213,7 @@ if (answer1 === "1" || answer1 === "Go to the bike store"){
   kanyePout();
 };
 
-console.log(score);
+console.log("Your score is: " + score);
 
 function kanyePout() {
   console.log("Your unwillingness to play by Kanye's rules has angered Kanye. He takes his ball and goes home. You lose.");
