@@ -1,0 +1,14 @@
+#display {
+  width: 50%;
+  height: 300px;
+  margin: 0 auto;
+  border: 3px solid black;
+  padding: 5px;
+}
+
+#input {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
