@@ -76,7 +76,7 @@ if (answer1 === "1" || answer1 === "Go to the bike store"){
 
     if (answer1_2 === "1" || answer1_2 === "Have his back") {
       score += 1;
-      var answer1_2_1 = prompt("'Oh hell yeah, let's cut 'em up!' exclaims Kanye. You and Kanye run up on Drake. Things get heated quickly as Kanye grabs Drake and tries to lift him out of his seat. Drake's crew sees the scuffle and run over to help. What do you do? \n\n1. Engage all of Drake's crew in hand to hand combat \n\n2. Run like hell ");
+      var answer1_2_1 = prompt("'Oh hell yeah, let's cut 'em up!' exclaims Kanye. You and Kanye run up on Drake. Things get heated quickly as Kanye grabs Drake and tries to lift him out of his seat. Drake's crew sees the scuffle and run over to help. What do you do? \n\n1. Engage all of Drake's crew in hand to hand combat \n\n2. Run like hell \n\n3. Push Kanye into Drake ");
 
       if (answer1_2_1 === "1" || answer1_2_1 === "Engage all of Drake's crew in hand to hand combat") {
         score -= 1;
@@ -84,6 +84,10 @@ if (answer1 === "1" || answer1 === "Go to the bike store"){
       } else if (answer1_2_1 === "2" || answer1_2_1 === "Run like hell") {
         score -= 1;
         kanyeDiss();
+      } else if (answer1_2_1 === "3" || answer1_2_1 === "Push Kanye into Drake"){
+        score -= score;
+        console.log("'NO BODY PUSHES KANYE WEST!' Kanye snaps his fingers.");
+        kanyeGuard();
       } else {
         score += 0;
         kanyePout();
