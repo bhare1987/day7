@@ -4,6 +4,7 @@ var answer,
 $( document ).ready(function() {
   $('#button').on("click", function(){
     answer = $("#input").val();
+    $("#input").val("");
     if (answer === "1" || answer === "Go to the bike store"){
       score += 1;
       content = "<p>'I make awesome decisions in bike stores!' exclaims Kanye. You jump in his ride and cruise down to the bike store. Racks of bikes of all different shapes, colors, and sizes are yours for the taking. Kanye snaps his fingers to get you back on task. 'You are going to help me find the perfect bike for Kim.' Do you choose <br/>1. The stylish road bike <br/>2. The practical beach cruiser <br/>3. The Big Wheel Tricycle</p>";
