@@ -192,11 +192,11 @@ if (answer1 === "1" || answer1 === "Go to the bike store"){
       kanyeWin();
     } else if (answer1_3_3 === "2" || answer1_3_3 === "What he thinks of fur pillows") {
       score += 5;
-      console.log("Fur pillows are actually hard to sleep on");
+      console.log("Fur pillows are actually hard to sleep on.");
       kanyeWin();
     } else if (answer1_3_3 === "3" || answer1_3_3 === "What he thinks of apples") {
       score += 5;
-      console.log("If you have an apple and I have an apple and we exchange these apples then you and I will still each have one apple");
+      console.log("If you have an apple and I have an apple and we exchange these apples then you and I will still each have one apple.");
       kanyeWin();
     } else {
       score += 0;
