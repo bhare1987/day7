@@ -161,7 +161,7 @@ if (answer1 === "1" || answer1 === "Go to the bike store"){
       kanyePout();
     }
 
-  } else if (answer1_3 === "2" || "The filet mignon") {
+  } else if (answer1_3 === "2" || answer1_3 === "The filet mignon") {
     score += 1;
     var answer1_3_2 = prompt("'You got beef with Kanye?' he asks. 'You wanna be startin' something with your food choice son?' Do you \n\n1. Apologize. You don't want beef with Kanye \n\n2. Say you just wanted some steak \n\n3. Flip the table");
 
@@ -182,7 +182,7 @@ if (answer1 === "1" || answer1 === "Go to the bike store"){
       kanyePout();
     }
 
-  } else if (answer1_3 === "3" || "Doritos and dom perignon") {
+  } else if (answer1_3 === "3" || answer1_3 === "Doritos and dom perignon") {
     score += 1;
     var answer1_3_3 = prompt("'You gonna order the Kanye in Kanye's favorite restaurant? That's bold son. I like you. You may ask me one question.' Do you ask \n\n1. What he thinks of planes \n\n2. What he thinks of fur pillows \n\n3. What he thinks of apples");
 
