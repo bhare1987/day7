@@ -49,7 +49,7 @@ treeLogic = {
     } else {
       answer = answer.toString();
     }
-    return answer;
+    return treeLogic.answer = answer;
   }
 }
 score = {
@@ -73,37 +73,37 @@ if (treeLogic.answer === "1" || treeLogic.answer === "Go to the bike store"){
   score.addPoints(1);
   treeLogic.getAnswer(messages.prompt(messages.bikeStore));
 
-  if (answer1_1 === "1" || answer1_1 === "2" || answer1_1 === "The stylish road bike" || answer1_1 === "The practical beach cruiser") {
+  if (treeLogic.answer === "1" || treeLogic.answer === "2" || treeLogic.answer === "The stylish road bike" || treeLogic.answer === "The practical beach cruiser") {
     score.addPoints(1);
     treeLogic.getAnswer(messages.prompt(messages.kanyeFly));
 
-    if (answer1_1_1 === "1" || answer1_1_1 === "Agree with Kanye") {
+    if (treeLogic.answer === "1" || treeLogic.answer === "Agree with Kanye") {
       score.addPoints(5);
       messages.alert(messages.kanyeKim);
       messages.alert(messages.kanyeWin);
-    } else if (answer1_1_1 === "2"  || answer1_1_1 === "Stick a bicycle pump in the spokes") {
+    } else if (treeLogic.answer === "2"  || treeLogic.answer === "Stick a bicycle pump in the spokes") {
       score.zeroScore();;
       messages.alert(messages.kanyeGuard);
-    } else if (answer1_1_1 === "3"  || answer1_1_1 === "Ride around with him") {
+    } else if (treeLogic.answer === "3"  || treeLogic.answer === "Ride around with him") {
       score.addPoints(5);
       messages.alert(messages.kanyeRace);
       messages.alert(messages.kanyeWin);
     } else {
       messages.alert(messages.kanyePout);
     }
-  } else if (answer1_1 === "3" || answer1_1 === "The Big Wheel Tricycle") {
+  } else if (treeLogic.answer === "3" || treeLogic.answer === "The Big Wheel Tricycle") {
       score.addPoints(1);
       treeLogic.getAnswer(messages.prompt(messages.bikeJoke));
 
-      if (answer1_1_3 === "1" || answer1_1_3 === "Yes, just like your career") {
+      if (treeLogic.answer === "1" || treeLogic.answer === "Yes, just like your career") {
         score.zeroScore();
         messages.alert(messages.kanyeThreat);
         messages.alert(messages.kanyeGuard);
-      } else if (answer1_1_3 === "2" || answer1_1_3 === "No way, big wheels are awesome") {
+      } else if (treeLogic.answer === "2" || treeLogic.answer === "No way, big wheels are awesome") {
         score.addPoints(5);
         messages.alert(messages.kanyeKim);
         messages.alert(messages.kanyeWin);
-      } else if (answer1_1_3 === "3" || answer1_1_3 === "Run away") {
+      } else if (treeLogic.answer === "3" || treeLogic.answer === "Run away") {
         score.subPoints(1);
         messages.alert(messages.kanyeDiss);
       } else {
@@ -117,17 +117,17 @@ if (treeLogic.answer === "1" || treeLogic.answer === "Go to the bike store"){
     score.addPoints(1);
     treeLogic.getAnswer(messages.prompt(messages.grammys));
 
-    if (answer1_2 === "1" || answer1_2 === "Have his back") {
+    if (treeLogic.answer === "1" || treeLogic.answer === "Have his back") {
       score.addPoints(1);
       treeLogic.getAnswer(messages.prompt(messages.kanyeSupport));
 
-      if (answer1_2_1 === "1" || answer1_2_1 === "Engage all of Drake's crew in hand to hand combat") {
+      if (treeLogic.answer === "1" || treeLogic.answer === "Engage all of Drake's crew in hand to hand combat") {
         score.subPoints(1);
         messages.alert(messages.drakeGroupFight);
-      } else if (answer1_2_1 === "2" || answer1_2_1 === "Run like hell") {
+      } else if (treeLogic.answer === "2" || treeLogic.answer === "Run like hell") {
         score.subPoints(1);
         messages.alert(messages.kanyeDiss);
-      } else if (answer1_2_1 === "3" || answer1_2_1 === "Push Kanye into Drake"){
+      } else if (treeLogic.answer === "3" || treeLogic.answer === "Push Kanye into Drake"){
         score.zeroScore();
         messages.alert(messages.kanyePush);
         messages.alert(messages.kanyeGuard);
@@ -135,36 +135,36 @@ if (treeLogic.answer === "1" || treeLogic.answer === "Go to the bike store"){
         messages.alert(messages.kanyePout);
       }
 
-    } else if (answer1_2 === "2" || answer1_2 === "Turn traitor and support Drake") {
+    } else if (treeLogic.answer === "2" || treeLogic.answer === "Turn traitor and support Drake") {
       score.addPoints(1);
       treeLogic.getAnswer(messages.prompt(messages.kanyeBetray));
 
-      if (answer1_2_2 === "1" || answer1_2_2 === "Engage Kanye in hand to hand combat") {
+      if (treeLogic.answer === "1" || treeLogic.answer === "Engage Kanye in hand to hand combat") {
         score.zeroScore();
         messages.alert(messages.kanyeThreat);
         messages.alert(messages.kanyeGuard);
-      } else if (answer1_2_2 === "2" || answer1_2_2 === "Push Drake into Kanye") {
+      } else if (treeLogic.answer === "2" || treeLogic.answer === "Push Drake into Kanye") {
         score.subPoints(1);
         messages.alert(messages.drakePush);
-      } else if (answer1_2_2 === "3" || answer1_2_2 === "Run away") {
+      } else if (treeLogic.answer === "3" || treeLogic.answer === "Run away") {
         score.subPoints(1);
         messages.alert(messages.kanyeDiss);
       } else {
         messages.alert(messages.kanyePout);
       }
 
-    } else if (answer1_2 === "3" || answer1_2 === "Find T-Swift and see if she's dating anyone right now") {
+    } else if (treeLogic.answer === "3" || treeLogic.answer === "Find T-Swift and see if she's dating anyone right now") {
       score.addPoints(1);
       treeLogic.getAnswer(messages.prompt(messages.findTSwift));
 
-      if (answer1_2_3 === "1" || answer1_2_3 === "Apologize and appeal to Kanye's mercy") {
+      if (treeLogic.answer === "1" || treeLogic.answer === "Apologize and appeal to Kanye's mercy") {
         score.addPoints(5);
         messages.alert(messages.kanyeWin);
-      } else if (answer1_2_3 === "2" || answer1_2_3 === "Pretend he's not there") {
+      } else if (treeLogic.answer === "2" || treeLogic.answer === "Pretend he's not there") {
         score.zeroScore();
         messages.alert(messages.kanyeIsThere);
         messages.alert(messages.kanyeGuard);
-      } else if (answer1_2_3 === "3" || answer1_2_3 === "Run!") {
+      } else if (treeLogic.answer === "3" || treeLogic.answer === "Run!") {
         score.subPoints(1);
         messages.alert(messages.kanyeDiss);
       } else {
@@ -180,18 +180,18 @@ if (treeLogic.answer === "1" || treeLogic.answer === "Go to the bike store"){
   score.addPoints(1);
   treeLogic.getAnswer(messages.prompt(messages.getFood));
 
-  if (answer1_3 === "1" || answer1_3 === "The salmon") {
+  if (treeLogic.answer === "1" || treeLogic.answer === "The salmon") {
     score.addPoints(1);
     treeLogic.getAnswer(messages.prompt(messages.orderSalmon));
 
-    if (answer1_3_1 === "1" || answer1_3_1 === "Get up and walk out") {
+    if (treeLogic.answer === "1" || treeLogic.answer === "Get up and walk out") {
       score.subPoints(1);
       messages.alert(messages.kanyeDiss);
-    } else if (answer1_3_1 === "2" || answer1_3_1 === "Dry your face and apologize") {
+    } else if (treeLogic.answer === "2" || treeLogic.answer === "Dry your face and apologize") {
       score.addPoints(5);
       messages.alert(messages.restaurantApologize);
       messages.alert(messages.kanyeWin);
-    } else if (answer1_3_1 === "3" || answer1_3_1 === "Flip the table") {
+    } else if (treeLogic.answer === "3" || treeLogic.answer === "Flip the table") {
       score.zeroScore();
       messages.alert(messages.kanyeThreat);
       messages.alert(messages.kanyeGuard);
@@ -199,19 +199,19 @@ if (treeLogic.answer === "1" || treeLogic.answer === "Go to the bike store"){
       messages.alert(messages.kanyePout);
     }
 
-  } else if (answer1_3 === "2" || answer1_3 === "The filet mignon") {
+  } else if (treeLogic.answer === "2" || treeLogic.answer === "The filet mignon") {
     score.addPoints(1);
     treeLogic.getAnswer(messages.prompt(messages.orderBeef));
 
-    if (answer1_3_2 === "1" || "Apologize. You don't want beef with Kanye") {
+    if (treeLogic.answer === "1" || treeLogic.answer === "Apologize. You don't want beef with Kanye") {
       score.addPoints(5);
       messages.alert(messages.noKanyeBeef);
       messages.alert(messages.kanyeWin);
-    } else if (answer1_3_2 === "2" || "Say you just wanted some steak") {
+    } else if (treeLogic.answer === "2" || treeLogic.answer === "Say you just wanted some steak") {
       score.subPoints(1);
       messages.alert(messages.vegetarianKanye);
       messages.alert(messages.kanyePout);
-    } else if (answer1_3_2 === "3" || "Flip the table") {
+    } else if (treeLogic.answer === "3" || treeLogic.answer === "Flip the table") {
       score.zeroScore();
       messages.alert(messages.kanyeThreat);
       messages.alert(messages.kanyeGuard);
@@ -219,19 +219,19 @@ if (treeLogic.answer === "1" || treeLogic.answer === "Go to the bike store"){
       messages.alert(messages.kanyePout);
     }
 
-  } else if (answer1_3 === "3" || answer1_3 === "Doritos and dom perignon") {
+  } else if (treeLogic.answer === "3" || treeLogic.answer === "Doritos and dom perignon") {
     score.addPoints(1);
     treeLogic.getAnswer(messages.prompt(messages.orderDoritos));
 
-    if (answer1_3_3 === "1" || answer1_3_3 === "What he thinks of planes") {
+    if (treeLogic.answer === "1" || treeLogic.answer === "What he thinks of planes") {
       score.addPoints(5);
       messages.alert(messages.kanyePlanes);
       messages.alert(messages.kanyeWin);
-    } else if (answer1_3_3 === "2" || answer1_3_3 === "What he thinks of fur pillows") {
+    } else if (treeLogic.answer === "2" || treeLogic.answer === "What he thinks of fur pillows") {
       score.addPoints(5);
       messages.alert(messages.kanyePillows);
       messages.alert(messages.kanyeWin);
-    } else if (answer1_3_3 === "3" || answer1_3_3 === "What he thinks of apples") {
+    } else if (treeLogic.answer === "3" || treeLogic.answer === "What he thinks of apples") {
       score.addPoints(5);
       messages.alert(messages.kanyeApples);
       messages.alert(messages.kanyeWin);
@@ -247,6 +247,7 @@ if (treeLogic.answer === "1" || treeLogic.answer === "Go to the bike store"){
   messages.alert(messages.kanyeWin);
 }
 
+messages.alert("Your score is: " + score.points);
 
 // comparator: function(arg1, res1, arg2, res2, arg3, res3, elseVar) {
 //   if (arg1){
