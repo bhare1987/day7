@@ -110,8 +110,7 @@ if (treeLogic.answer === "1" || treeLogic.answer === "Go to the bike store"){
         messages.alert(messages.kanyePout);
       }
   } else {
-    score += 0;
-    kanyePout();
+    messages.alert(messages.kanyePout);
   }
 
 } else if (treeLogic.answer === "2" || treeLogic.answer === "Go to the Grammys") {
@@ -124,137 +123,128 @@ if (treeLogic.answer === "1" || treeLogic.answer === "Go to the bike store"){
 
       if (answer1_2_1 === "1" || answer1_2_1 === "Engage all of Drake's crew in hand to hand combat") {
         score.subPoints(1);
-        console.log();
+        messages.alert(messages.drakeGroupFight);
       } else if (answer1_2_1 === "2" || answer1_2_1 === "Run like hell") {
-        score -= 1;
-        kanyeDiss();
+        score.subPoints(1);
+        messages.alert(messages.kanyeDiss);
       } else if (answer1_2_1 === "3" || answer1_2_1 === "Push Kanye into Drake"){
-        score -= score;
-        console.log();
-        kanyeGuard();
+        score.zeroScore();
+        messages.alert(messages.kanyePush);
+        messages.alert(messages.kanyeGuard);
       } else {
-        score += 0;
-        kanyePout();
+        messages.alert(messages.kanyePout);
       }
 
     } else if (answer1_2 === "2" || answer1_2 === "Turn traitor and support Drake") {
-      score += 1;
-      var answer1_2_2 = prompt();
+      score.addPoints(1);
+      treeLogic.getAnswer(messages.prompt(messages.kanyeBetray));
 
       if (answer1_2_2 === "1" || answer1_2_2 === "Engage Kanye in hand to hand combat") {
-        score -= score;
-        kanyeThreat();
-        kanyeGuard();
+        score.zeroScore();
+        messages.alert(messages.kanyeThreat);
+        messages.alert(messages.kanyeGuard);
       } else if (answer1_2_2 === "2" || answer1_2_2 === "Push Drake into Kanye") {
-        score -= 1;
-        console.log();
+        score.subPoints(1);
+        messages.alert(messages.drakePush);
       } else if (answer1_2_2 === "3" || answer1_2_2 === "Run away") {
-        score -= 1;
-        kanyeDiss();
+        score.subPoints(1);
+        messages.alert(messages.kanyeDiss);
       } else {
-        score += 0;
-        kanyePout();
+        messages.alert(messages.kanyePout);
       }
 
     } else if (answer1_2 === "3" || answer1_2 === "Find T-Swift and see if she's dating anyone right now") {
-      score += 1;
-      var answer1_2_3 = prompt();
+      score.addPoints(1);
+      treeLogic.getAnswer(messages.prompt(messages.findTSwift));
 
       if (answer1_2_3 === "1" || answer1_2_3 === "Apologize and appeal to Kanye's mercy") {
-        score += 5;
-        console.log();
-        kanyeWin();
+        score.addPoints(5);
+        messages.alert(messages.kanyeWin);
       } else if (answer1_2_3 === "2" || answer1_2_3 === "Pretend he's not there") {
-        score -= score;
-        console.log();
-        kanyeGuard();
+        score.zeroScore();
+        messages.alert(messages.kanyeIsThere);
+        messages.alert(messages.kanyeGuard);
       } else if (answer1_2_3 === "3" || answer1_2_3 === "Run!") {
-        score -= 1;
-        kanyeDiss();
+        score.subPoints(1);
+        messages.alert(messages.kanyeDiss);
       } else {
-        score -= score;
-        kanyeGuard();
+        score.zeroScore();
+        messages.alert(messages.kanyeGuard);
       }
 
     } else {
-      score += 0;
-      kanyePout();
+      messages.alert(messages.kanyePout);
     }
 
 } else if (treeLogic.answer === "3" || treeLogic.answer === "Go get some food") {
-  score += 1;
-  var answer1_3 = prompt();
+  score.addPoints(1);
+  treeLogic.getAnswer(messages.prompt(messages.getFood));
 
   if (answer1_3 === "1" || answer1_3 === "The salmon") {
-    score += 1;
-    var answer1_3_1 = prompt();
+    score.addPoints(1);
+    treeLogic.getAnswer(messages.prompt(messages.orderSalmon));
 
     if (answer1_3_1 === "1" || answer1_3_1 === "Get up and walk out") {
-      score -= 1;
-      kanyeDiss();
+      score.subPoints(1);
+      messages.alert(messages.kanyeDiss);
     } else if (answer1_3_1 === "2" || answer1_3_1 === "Dry your face and apologize") {
-      score += 5;
-      console.log();
-      kanyeWin();
+      score.addPoints(5);
+      messages.alert(messages.restaurantApologize);
+      messages.alert(messages.kanyeWin);
     } else if (answer1_3_1 === "3" || answer1_3_1 === "Flip the table") {
-      score -= score;
-      kanyeThreat();
-      kanyeGuard();
+      score.zeroScore();
+      messages.alert(messages.kanyeThreat);
+      messages.alert(messages.kanyeGuard);
     } else {
-      score =+ 0;
-      kanyePout();
+      messages.alert(messages.kanyePout);
     }
 
   } else if (answer1_3 === "2" || answer1_3 === "The filet mignon") {
-    score += 1;
-    var answer1_3_2 = prompt();
+    score.addPoints(1);
+    treeLogic.getAnswer(messages.prompt(messages.orderBeef));
 
     if (answer1_3_2 === "1" || "Apologize. You don't want beef with Kanye") {
-      score += 5;
-      console.log();
-      kanyeWin();
+      score.addPoints(5);
+      messages.alert(messages.noKanyeBeef);
+      messages.alert(messages.kanyeWin);
     } else if (answer1_3_2 === "2" || "Say you just wanted some steak") {
-      score -= 1;
-      console.log();
-      kanyePout();
+      score.subPoints(1);
+      messages.alert(messages.vegetarianKanye);
+      messages.alert(messages.kanyePout);
     } else if (answer1_3_2 === "3" || "Flip the table") {
-      score -= score;
-      kanyeThreat();
-      kanyeGuard();
+      score.zeroScore();
+      messages.alert(messages.kanyeThreat);
+      messages.alert(messages.kanyeGuard);
     } else {
-      score += 0;
-      kanyePout();
+      messages.alert(messages.kanyePout);
     }
 
   } else if (answer1_3 === "3" || answer1_3 === "Doritos and dom perignon") {
-    score += 1;
-    var answer1_3_3 = prompt();
+    score.addPoints(1);
+    treeLogic.getAnswer(messages.prompt(messages.orderDoritos));
 
     if (answer1_3_3 === "1" || answer1_3_3 === "What he thinks of planes") {
-      score += 5;
-      console.log();
-      kanyeWin();
+      score.addPoints(5);
+      messages.alert(messages.kanyePlanes);
+      messages.alert(messages.kanyeWin);
     } else if (answer1_3_3 === "2" || answer1_3_3 === "What he thinks of fur pillows") {
-      score += 5;
-      console.log();
-      kanyeWin();
+      score.addPoints(5);
+      messages.alert(messages.kanyePillows);
+      messages.alert(messages.kanyeWin);
     } else if (answer1_3_3 === "3" || answer1_3_3 === "What he thinks of apples") {
-      score += 5;
-      console.log();
-      kanyeWin();
+      score.addPoints(5);
+      messages.alert(messages.kanyeApples);
+      messages.alert(messages.kanyeWin);
     } else {
-      score += 0;
-      kanyePout();
+      messages.alert(messages.kanyeWin);
     }
 
   } else {
-    score += 0;
-    kanyePout();
+    messages.alert(messages.kanyeWin);
   }
 
 } else {
-  score += 0;
-  kanyePout();
+  messages.alert(messages.kanyeWin);
 }
 
 
