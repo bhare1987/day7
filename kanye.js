@@ -8,7 +8,7 @@ if (answer1 === "1" || answer1 === "Go to the bike store"){
 
   if (answer1_1 === "1" || answer1_1 === "The stylish road bike") {
     score += 1;
-    var answer1_1_1 = prompt("'Nah, I like the other one better,' says Kanye, 'and I know style. I been fly so long I feel asleep on the plane!' He begins to bike around the store. What do you do? \n\n1. Agree with Kanye \n\n2. Stick a bicycle pump in the spokes \n\n3. Ride around with him");
+    var answer1_1_1 = prompt("'Nah, I like the other one better,' says Kanye, 'and I know style. I been fly so long I fell asleep on the plane!' He begins to bike around the store. What do you do? \n\n1. Agree with Kanye \n\n2. Stick a bicycle pump in the spokes \n\n3. Ride around with him");
 
     if (answer1_1_1 === "1" || answer1_1_1 === "Agree with Kanye") {
       score += 5;
@@ -27,7 +27,7 @@ if (answer1 === "1" || answer1 === "Go to the bike store"){
     };
   } else if (answer1_1 === "2" || answer1_1 === "The practical beach cruiser") {
     score += 1;
-    var answer1_1_2 = prompt("'Nah, I like the other one better,' says Kanye, 'and I know style. I been fly so long I feel asleep on the plane!' He begins to bike around the store. What do you do? \n\n1. Agree with Kanye \n\n2. Stick a bicycle pump in the spokes \n\n3. Ride around with him");
+    var answer1_1_2 = prompt("'Nah, I like the other one better,' says Kanye, 'and I know style. I been fly so long I fell asleep on the plane!' He begins to bike around the store. What do you do? \n\n1. Agree with Kanye \n\n2. Stick a bicycle pump in the spokes \n\n3. Ride around with him");
 
     if (answer1_1_2 === "1" || answer1_1_2 === "Agree with Kanye") {
       score += 5;
