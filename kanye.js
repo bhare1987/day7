@@ -41,19 +41,15 @@ var messages = {
   kanyeDiss: "You managed to get away. 3 months later, Kanye releases a brutal diss track about your cowardice and your friends make fun of you about it for years to come. You lose."
 },
 treeLogic = {
-  answer: function(){
-
-  },
-  comparator: function(arg1, res1, arg2, res2, arg3, res3, elseVar) {
-    if (arg1){
-        res1
-    } else if (arg2){
-      res2
-    } else if (arg3){
-      res3
+  answer: "",
+  getAnswer: function(response){
+    var answer = response;
+    if (typeof response === "string") {
+      answer = answer.trim().toLowerCase();
     } else {
-      elseVar
+      answer = answer.toString();
     }
+    return answer;
   }
 }
 score = {
@@ -67,91 +63,67 @@ score = {
   zeroScore: function(){
     score.points = 0;
   }
-},
-answer;
+};
 
 
-var score = 0,
-    answer1 =
+messages.alert(messages.welcome);
+treeLogic.getAnswer(messages.prompt(messages.initialPrompt));
 
-if (answer1 === "1" || answer1 === "Go to the bike store"){
-  score += 1;
-  var answer1_1 = prompt();
+if (treeLogic.answer === "1" || treeLogic.answer === "Go to the bike store"){
+  score.addPoints(1);
+  treeLogic.getAnswer(messages.prompt(messages.bikeStore));
 
-  if (answer1_1 === "1" || answer1_1 === "The stylish road bike") {
-    score += 1;
-    var answer1_1_1 = prompt();
+  if (answer1_1 === "1" || answer1_1 === "2" || answer1_1 === "The stylish road bike" || answer1_1 === "The practical beach cruiser") {
+    score.addPoints(1);
+    treeLogic.getAnswer(messages.prompt(messages.kanyeFly));
 
     if (answer1_1_1 === "1" || answer1_1_1 === "Agree with Kanye") {
-      score += 5;
-      kanyeKim();
-      kanyeWin();
+      score.addPoints(5);
+      messages.alert(messages.kanyeKim);
+      messages.alert(messages.kanyeWin);
     } else if (answer1_1_1 === "2"  || answer1_1_1 === "Stick a bicycle pump in the spokes") {
-      score -= score;
-      kanyeGuard();
+      score.zeroScore();;
+      messages.alert(messages.kanyeGuard);
     } else if (answer1_1_1 === "3"  || answer1_1_1 === "Ride around with him") {
-      score += 5;
-      console.log();
-      kanyeWin();
+      score.addPoints(5);
+      messages.alert(messages.kanyeRace);
+      messages.alert(messages.kanyeWin);
     } else {
-      score += 0;
-      kanyePout();
-    }
-  } else if (answer1_1 === "2" || answer1_1 === "The practical beach cruiser") {
-    score += 1;
-    var answer1_1_2 = prompt();
-
-    if (answer1_1_2 === "1" || answer1_1_2 === "Agree with Kanye") {
-      score += 5;
-      kanyeKim();
-      kanyeWin();
-    } else if (answer1_1_2 === "2"  || answer1_1_2 === "Stick a bicycle pump in the spokes") {
-      score -= score;
-      kanyeGuard();
-    } else if (answer1_1_2 === "3"  || answer1_1_2 === "Ride around with him") {
-      score += 5;
-      console.log();
-      kanyeWin();
-    } else {
-      score += 0;
-      kanyePout();
+      messages.alert(messages.kanyePout);
     }
   } else if (answer1_1 === "3" || answer1_1 === "The Big Wheel Tricycle") {
-      score +=1;
-      var answer1_1_3 = prompt();
+      score.addPoints(1);
+      treeLogic.getAnswer(messages.prompt(messages.bikeJoke));
 
       if (answer1_1_3 === "1" || answer1_1_3 === "Yes, just like your career") {
-        score -= score;
-        kanyeThreat();
-        kanyeGuard();
+        score.zeroScore();
+        messages.alert(messages.kanyeThreat);
+        messages.alert(messages.kanyeGuard);
       } else if (answer1_1_3 === "2" || answer1_1_3 === "No way, big wheels are awesome") {
-        score += 5;
-        console.log();
-        kanyeKim();
-        kanyeWin();
+        score.addPoints(5);
+        messages.alert(messages.kanyeKim);
+        messages.alert(messages.kanyeWin);
       } else if (answer1_1_3 === "3" || answer1_1_3 === "Run away") {
-        score -= 1;
-         kanyeDiss();
+        score.subPoints(1);
+        messages.alert(messages.kanyeDiss);
       } else {
-        score += 0;
-        kanyePout();
+        messages.alert(messages.kanyePout);
       }
-
   } else {
     score += 0;
     kanyePout();
   }
 
-} else if (answer1 === "2" || answer1 === "Go to the Grammys") {
-    score += 1;
-    var answer1_2 = prompt();
+} else if (treeLogic.answer === "2" || treeLogic.answer === "Go to the Grammys") {
+    score.addPoints(1);
+    treeLogic.getAnswer(messages.prompt(messages.grammys));
 
     if (answer1_2 === "1" || answer1_2 === "Have his back") {
-      score += 1;
-      var answer1_2_1 = prompt();
+      score.addPoints(1);
+      treeLogic.getAnswer(messages.prompt(messages.kanyeSupport));
 
       if (answer1_2_1 === "1" || answer1_2_1 === "Engage all of Drake's crew in hand to hand combat") {
-        score -= 1;
+        score.subPoints(1);
         console.log();
       } else if (answer1_2_1 === "2" || answer1_2_1 === "Run like hell") {
         score -= 1;
@@ -209,7 +181,7 @@ if (answer1 === "1" || answer1 === "Go to the bike store"){
       kanyePout();
     }
 
-} else if (answer1 === "3" || answer1 === "Go get some food") {
+} else if (treeLogic.answer === "3" || treeLogic.answer === "Go get some food") {
   score += 1;
   var answer1_3 = prompt();
 
@@ -284,3 +256,16 @@ if (answer1 === "1" || answer1 === "Go to the bike store"){
   score += 0;
   kanyePout();
 }
+
+
+// comparator: function(arg1, res1, arg2, res2, arg3, res3, elseVar) {
+//   if (arg1){
+//       res1
+//   } else if (arg2){
+//     res2
+//   } else if (arg3){
+//     res3
+//   } else {
+//     elseVar
+//   }
+// }
