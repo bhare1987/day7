@@ -24,7 +24,7 @@ if (answer1 === "1" || answer1 === "Go to the bike store"){
     } else {
       score += 0;
       kanyePout();
-    };
+    }
   } else if (answer1_1 === "2" || answer1_1 === "The practical beach cruiser") {
     score += 1;
     var answer1_1_2 = prompt("'Nah, I like the other one better,' says Kanye, 'and I know style. I been fly so long I fell asleep on the plane!' He begins to bike around the store. What do you do? \n\n1. Agree with Kanye \n\n2. Stick a bicycle pump in the spokes \n\n3. Ride around with him");
@@ -43,7 +43,7 @@ if (answer1 === "1" || answer1 === "Go to the bike store"){
     } else {
       score += 0;
       kanyePout();
-    };
+    }
   } else if (answer1_1 === "3" || answer1_1 === "The Big Wheel Tricycle") {
       score +=1;
       var answer1_1_3 = prompt("'You think this is a joke son?!' Kanye demands. How do you respond? \n\n1. Yes, just like your career \n\n2. No way, big wheels are awesome \n\n3. Run away");
@@ -68,7 +68,7 @@ if (answer1 === "1" || answer1 === "Go to the bike store"){
   } else {
     score += 0;
     kanyePout();
-  };
+  }
 
 } else if (answer1 === "2" || answer1 === "Go to the Grammys") {
     score += 1;
@@ -80,7 +80,7 @@ if (answer1 === "1" || answer1 === "Go to the bike store"){
 
       if (answer1_2_1 === "1" || answer1_2_1 === "Engage all of Drake's crew in hand to hand combat") {
         score -= 1;
-        console.log("You got your ass beat and wind up in the hospital. Kanye sends you no flowers. Kanye didn't need the help to begin with. You lose.")
+        console.log("You got your ass beat and wind up in the hospital. Kanye sends you no flowers. Kanye didn't need the help to begin with. You lose.");
       } else if (answer1_2_1 === "2" || answer1_2_1 === "Run like hell") {
         score -= 1;
         kanyeDiss();
@@ -135,13 +135,13 @@ if (answer1 === "1" || answer1 === "Go to the bike store"){
     } else {
       score += 0;
       kanyePout();
-    };
+    }
 
 } else if (answer1 === "3" || answer1 === "Go get some food") {
   score += 1;
   var answer1_3 = prompt("'I am going to order the salmon medium instead of medium well. I don't want to ruin the magic,' says Kanye. You jump on the back of his crotch rocket and ride down to Fish and Shizz. You are seated in the VIP section and given a menu. What do you order? \n\n1. The salmon \n\n2. The filet mignon \n\n3. Doritos and dom perignon");
 
-  if (answer1_3 === "1" || "The salmon") {
+  if (answer1_3 === "1" || answer1_3 === "The salmon") {
     score += 1;
     var answer1_3_1 = prompt("'You can't copy Kanye!' says Kanye, and throws his drink in your face. 'You may be talented, but you're not Kanye West!' Do you \n\n1. Get up and walk out \n\n2. Dry your face and apologize \n\n3. Flip the table");
 
@@ -167,7 +167,7 @@ if (answer1 === "1" || answer1 === "Go to the bike store"){
 
     if (answer1_3_2 === "1" || "Apologize. You don't want beef with Kanye") {
       score += 5;
-      console.log("'Smart choice son. You didn't want to beef with me. Ask Taylor'");
+      console.log("'Smart choice son. You didn't want to beef with me. Ask Taylor.'");
       kanyeWin();
     } else if (answer1_3_2 === "2" || "Say you just wanted some steak") {
       score -= 1;
@@ -180,7 +180,7 @@ if (answer1 === "1" || answer1 === "Go to the bike store"){
     } else {
       score += 0;
       kanyePout();
-    };
+    }
 
   } else if (answer1_3 === "3" || "Doritos and dom perignon") {
     score += 1;
@@ -206,26 +206,26 @@ if (answer1 === "1" || answer1 === "Go to the bike store"){
   } else {
     score += 0;
     kanyePout();
-  };
+  }
 
 } else {
   score += 0;
   kanyePout();
-};
+}
 
 console.log("Your score is: " + score);
 
 function kanyePout() {
   console.log("Your unwillingness to play by Kanye's rules has angered Kanye. He takes his ball and goes home. You lose.");
-};
+}
 
 function kanyeGuard() {
   console.log("The elite team of the Kanye Guard emerges from the shadows and murders you with razor sharp copies of Kanye's platinum albums. You are dead.");
-};
+}
 
 function kanyeWin() {
   console.log("You have survived the Journey to the Kanye West. Congratulations?");
-};
+}
 
 function kanyeKim() {
   console.log("'Kim's going to love this. I'm done with you now. Leave me.'");
