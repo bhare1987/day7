@@ -282,13 +282,13 @@ score = {
 
 messages.alert(messages.welcome);
 treeLogic.getAnswer(messages.prompt(messages.initialPrompt));
-if (treeLogic.answer === responses.first || treeLogic.answer === "go to the bike store") {
+if (treeLogic.answer === responses.first || treeLogic.answer === responses.bikeStore) {
   treeLogic.goBikeStore();
 }
-else if (treeLogic.answer === "2" || treeLogic.answer === "go to the grammys") {
+else if (treeLogic.answer === responses.second || treeLogic.answer === responses.grammys) {
   treeLogic.goGrammys();
 }
-else if (treeLogic.answer === "3" || treeLogic.answer === "go get some food") {
+else if (treeLogic.answer === responses.third || treeLogic.answer === responses.go) {
   treeLogic.goEat();
 } else {
   messages.alert(messages.kanyePout);
